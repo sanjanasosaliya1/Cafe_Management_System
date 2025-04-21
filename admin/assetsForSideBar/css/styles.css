@@ -1,0 +1,394 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+
+  /*===== Colors =====*/
+  --first-color: rgb(99, 85, 78);
+  --first-color-light: white;
+  --header-color: #c6c0bd;
+
+  /*===== Font and typography =====*/
+  --body-font: "Nunito", sans-serif;
+  --normal-font-size: 1rem;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: 0.5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*===== HEADER =====*/
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: var(--header-color);
+  z-index: var(--z-fixed);
+  transition: 0.5s;
+}
+
+.header__toggle {
+  color: #5b4c3a;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.header__toggle:hover {
+  color: rgb(99, 85, 78);
+}
+
+.header__img {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header__img img {
+  width: 40px;
+}
+
+/*===== NAV =====*/
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: -30%;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--first-color);
+  padding: 0.5rem 1rem 0 0;
+  transition: 0.5s;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav__logo,
+.nav__link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.nav__logo {
+  margin-bottom: 2rem;
+}
+
+.nav__logo-icon {
+  font-size: 1.25rem;
+  color: var(--header-color);
+}
+
+.nav__logo-name {
+  color: var(--header-color);
+  font-weight: 700;
+}
+
+.nav__link {
+  position: relative;
+  color: var(--first-color-light);
+  margin-bottom: 1.5rem;
+  transition: 0.3s;
+}
+
+.nav__link:hover {
+  color: #d5cfc6;
+}
+
+.nav__icon {
+  font-size: 1.25rem;
+}
+
+/*Show navbar movil*/
+.show {
+  left: 0;
+}
+
+.bgimg{
+  background-image: url("/cafe_management_system/admin/assetsForSideBar/img/bgpicture.jpg");
+  background-size: cover;
+}
+
+/*Active links*/
+.active {
+  color: #d5cfc6;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 32px;
+  background-color: #d5cfc6;
+}
+
+.btn-danger-gradiant{
+  background: rgb(99, 85, 78);
+  margin: 20px;
+}
+.btn-danger-gradiant:hover{
+  background-color:rgb(109, 86, 59);
+}
+.text-center .btn{
+  background-color: rgb(99, 85, 78);
+  color: white;
+}
+.text-center .btn:hover{
+  background-color:rgb(109, 86, 59);
+}
+.modal-body .btn{
+  background: rgb(99, 85, 78);
+  color:white;
+}
+.modal-body .btn:hover{
+  background: rgb(109, 86, 59);
+  color:white;
+}
+
+.card-body{
+  background-color:rgb(225, 221, 220);
+  border: 1px solid rgb(109, 86, 59);
+}
+.btn_create{
+  background: rgb(176, 167, 156);
+  color: white;
+  padding: 5px 30px 5px 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+}
+.btn_create:hover{
+  background: rgb(166, 157, 146);
+  color: white;
+}
+
+.btn_form{
+  background:  rgb(99, 85, 78);;
+  color: white;
+  
+}
+.btn_form:hover{
+  background: rgb(109, 86, 59);
+  color: white;
+}
+
+.tooltip.show {
+  top: -62px !important;
+}
+
+.table-wrapper .btn {
+  float: right;
+  color: #333;
+  background-color: #fff;
+  border-radius: 3px;
+  border: none;
+  outline: none !important;
+  margin-left: 10px;
+}
+.table-wrapper .btn:hover {
+  color: #333;
+  background: #f2f2f2;
+}
+.table-wrapper .btn.btn-primary {
+  color: #fff;
+  background: #03A9F4;
+}
+.table-wrapper .btn.btn-primary:hover {
+  background: #03a3e7;
+}
+.table-title .btn {		
+  font-size: 13px;
+  border: none;
+}
+.table-title .btn i {
+  float: left;
+  font-size: 21px;
+  margin-right: 5px;
+}
+.table-title .btn span {
+  float: left;
+  margin-top: 2px;
+}
+.table-title {
+  color: #fff;
+  background:rgb(99, 85, 78);		
+  padding: 16px 25px;
+  margin: -20px -25px 10px;
+  border-radius: 3px 3px 0 0;
+}
+.table-title h2 {
+  margin: 5px 0 0;
+  font-size: 24px;
+}
+table.table tr th, table.table tr td {
+  border-color: #e9e9e9;
+  padding: 12px 15px;
+  vertical-align: middle;
+}
+table.table tr th:first-child {
+  width: 60px;
+}
+table.table tr th:last-child {
+  width: 80px;
+}
+
+table.table th i {
+  font-size: 13px;
+  margin: 0 5px;
+  cursor: pointer;
+}	
+table.table td a {
+  font-weight: bold;
+  color: #566787;
+  display: inline-block;
+  text-decoration: none;
+}
+table.table td a:hover {
+  color: rgb(119, 86, 49);
+}
+table.table td a.view {        
+  width: 30px;
+  height: 30px;
+  color: rgb(86, 61, 32);
+  border: 2px solid;
+  border-radius: 30px;
+  text-align: center;
+}
+table.table td a.view i {
+  font-size: 22px;
+  margin: 2px 0 0 1px;
+}   
+table.table .avatar {
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+table {
+  counter-reset: section;
+}
+
+.count:before {
+  counter-increment: section;
+  content: counter(section);
+}
+
+.btnupdate{
+  background: rgb(176, 167, 156);
+  color: white;
+  font-weight: bold;
+}
+.btnupdate:hover{
+  background: rgb(166, 157, 146);
+  color: white;
+}
+
+.btn_create{
+  background: rgb(176, 167, 156);
+  color: white;
+  padding: 5px 30px 5px 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+}
+.btn_create:hover{
+  background: rgb(166, 157, 146);
+  color: white;
+}
+
+.btn_form{
+  background:  rgb(99, 85, 78);
+  color: white;
+  
+}
+.btn_form:hover{
+  background: rgb(109, 86, 59);
+  color: white;
+}
+
+.popover 
+{
+    top: -77px !important;
+}
+
+/* ===== MEDIA QUERIES=====*/
+@media screen and (min-width: 768px) {
+  body {
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem);
+  }
+
+  .header {
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+  }
+
+  .header__img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__img img {
+    width: 45px;
+  }
+
+  .l-navbar {
+    left: 0;
+    padding: 1rem 1rem 0 0;
+  }
+
+  /*Show navbar desktop*/
+  .showa {
+    width: calc(var(--nav-width) + 156px);
+  }
+
+  /*Add padding body desktop*/
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 188px);
+  }
+}
